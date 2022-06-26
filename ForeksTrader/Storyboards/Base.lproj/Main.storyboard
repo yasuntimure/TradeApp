@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ForeksTrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foreks Digital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-pe-hTb" customClass="PrimaryTitleLabel" customModule="ForeksTrader" customModuleProvider="target">
+                                <rect key="frame" x="24" y="56" width="366" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z74-un-r6q">
+                                <rect key="frame" x="24" y="95" width="54" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT1-tJ-AYT" customClass="SelectionButton" customModule="ForeksTrader" customModuleProvider="target">
+                                <rect key="frame" x="270" y="87" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Fze-GQ-xpf"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Son">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guf-I7-Rk9" customClass="SelectionButton" customModule="ForeksTrader" customModuleProvider="target">
+                                <rect key="frame" x="342" y="87" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="QKs-F5-cZD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Fark">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HmU-z8-TXY">
+                                <rect key="frame" x="0.0" y="133" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Mvx-0z-B8H"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="C7i-Rw-9lv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HmU-z8-TXY" secondAttribute="trailing" id="TFj-RO-Emz"/>
+                            <constraint firstItem="kYA-pe-hTb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Vzt-w9-vQ9"/>
+                            <constraint firstItem="kYA-pe-hTb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="XNT-Y9-NsY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kYA-pe-hTb" secondAttribute="trailing" constant="24" id="Ybl-LY-lyc"/>
+                            <constraint firstItem="HmU-z8-TXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d7t-Vx-eDV"/>
+                            <constraint firstItem="Guf-I7-Rk9" firstAttribute="leading" secondItem="MT1-tJ-AYT" secondAttribute="trailing" constant="12" id="iJT-x4-dME"/>
+                            <constraint firstItem="Guf-I7-Rk9" firstAttribute="centerY" secondItem="Z74-un-r6q" secondAttribute="centerY" id="iY6-ry-SEM"/>
+                            <constraint firstAttribute="bottom" secondItem="HmU-z8-TXY" secondAttribute="bottom" id="j7q-4i-Iu4"/>
+                            <constraint firstItem="MT1-tJ-AYT" firstAttribute="centerY" secondItem="Z74-un-r6q" secondAttribute="centerY" id="kYO-JB-cO2"/>
+                            <constraint firstItem="HmU-z8-TXY" firstAttribute="top" secondItem="MT1-tJ-AYT" secondAttribute="bottom" constant="12" id="s48-R9-1Js"/>
+                            <constraint firstItem="Z74-un-r6q" firstAttribute="top" secondItem="kYA-pe-hTb" secondAttribute="bottom" constant="18" id="sD7-G3-FUN"/>
+                            <constraint firstItem="Guf-I7-Rk9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="tJc-aA-cRc"/>
+                            <constraint firstItem="Z74-un-r6q" firstAttribute="leading" secondItem="kYA-pe-hTb" secondAttribute="leading" id="xXE-bR-wU5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dropDownButton1" destination="MT1-tJ-AYT" id="NeS-jR-CEw"/>
+                        <outlet property="dropDownButton2" destination="Guf-I7-Rk9" id="R3k-44-8nd"/>
+                        <outlet property="symbolLabel" destination="Z74-un-r6q" id="tZ1-6R-4tU"/>
+                        <outlet property="titleLabel" destination="kYA-pe-hTb" id="Esb-8n-ZH8"/>
+                        <outlet property="tradeTableView" destination="HmU-z8-TXY" id="a6I-0d-Pi1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

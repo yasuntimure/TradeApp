@@ -1,0 +1,6 @@
+framework module Pods_ForeksTraderTests {
+  umbrella header "Pods-ForeksTraderTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
